@@ -16,13 +16,13 @@ import com.yxph.dataObject1;
 
 public class test {
 	public  void  test() throws IOException {
-	String url = "http://120.25.101.13/kie-drools-wb/maven2wb/com/yxph/testproject1/testproject1/1.0/testproject1-1.0.jar";
+	String url = "http://120.25.101.*/kie-drools-wb/maven2wb/com/yxph/testproject1/testproject1/1.0/testproject1-1.0.jar";
 	ReleaseIdImpl releaseId = new ReleaseIdImpl("com.yxph.testproject1", "testproject1", "1.0");
 	KieServices ks = KieServices.Factory.get();
 	KieRepository kr = ks.getRepository();
 	UrlResource urlResource = (UrlResource) ks.getResources().newUrlResource(url);
-	urlResource.setUsername("drools");
-	urlResource.setPassword("admin123");
+	urlResource.setUsername("");
+	urlResource.setPassword("");
 	urlResource.setBasicAuthentication("enabled");
 	InputStream is = urlResource.getInputStream();
 	System.out.println(is.available());
